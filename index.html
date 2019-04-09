@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>EX 5 js</title>
+<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+</head>
+
+<body>
+<!-- premier block -->
+  <label class="d-flex" for="number1">Veuillez entrer un premier nombre à virgule.</label>
+  <input class="d-inline-block" id="number1" type="text" placeholder="405.493">
+<!-- deuxieme block -->
+  <label class="d-block" for="number2">Veuillez entrer un deuxième nombre à virgule.</label>
+  <input id="number2" type="text" placeholder="Exemple: 12.12">
+
+  <div class= "text-center"> <button onclick=popup()>Envoyer</button>
+  </div>
+
+  <script>
+
+    function popup(){
+  // récupération variables
+  var number1=document.getElementById('number1').value;
+  var number2=document.getElementById('number2').value;
+
+  number1 = Math.trunc(number1);
+
+  number1 = number1 * number2 ;
+
+  if (isNaN (number1) || isNaN (number2)) {
+  alert("DES NOMBRES SVP")
+}
+
+else {
+
+  alert (number1)
+}
+  }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</body>
+</html>
